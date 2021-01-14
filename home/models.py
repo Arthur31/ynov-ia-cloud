@@ -10,4 +10,5 @@ class Profile(models.Model):
     firstname = models.CharField(max_length=200)
     lastname = models.CharField(max_length=200)
     location = models.CharField(max_length=200)
+    email = models.CharField(max_length=200, default="")
     creation_date = models.DateTimeField() 

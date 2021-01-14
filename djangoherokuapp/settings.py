@@ -78,10 +78,25 @@ WSGI_APPLICATION = 'djangoherokuapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        # 'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'd64rt45g5ai0d',
+
+        'USER': 'zsgdazyozobkcs',
+
+        'PASSWORD': '275f2424f0394b7c0da95b4520f4ffc1c2b677797e3c9da7d39b5d84880fde09',
+
+        'HOST': 'ec2-54-170-190-29.eu-west-1.compute.amazonaws.com',
+
+        'PORT': '5432',
+
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #     # 'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
 
