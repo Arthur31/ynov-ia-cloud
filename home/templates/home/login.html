@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login</title>
+ </head>
+ <body>
+     <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+         <input type="text" placeholder="Username" name="username"><br>
+         <input type="password" placeholder="Password" name="password"><br>
+         {% for error in errors %}
+             <p style="color:red">{{ error }}</p>
+         {% endfor %}
+         <button class="" type="submit">Login</button>
+     </form>
+     <a href="{% url 'register' %}">Not already user ? Go to register</a>
+ </body>
+ </html> 

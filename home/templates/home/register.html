@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Register</title>
+ </head>
+ <body>
+     <form action="{% url 'register' %}" method="post">
+         {% csrf_token %}
+         {{form.username}}<br>
+         {{form.email}}<br>
+         {{form.password1}}<br>
+         {% for error in form.password1.errors %}
+             <p style="color:red">{{ error }}</p>
+         {% endfor %}
+         {{form.password2}}<br>
+         {% for error in form.password2.errors %}
+             <p style="color:red">{{ error }}</p>
+         {% endfor %}
+         <button class="" type="submit">Register</button>
+     </form>
+     <a href="{% url 'login' %}">Already user ? Go to login</a>
+ </body>
+ </html> 
