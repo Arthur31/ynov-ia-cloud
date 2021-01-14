@@ -1,1 +1,1 @@
-web: gunicorn djangoherokuapp.app
+web: gunicorn djangoherokuapp.wsgi
