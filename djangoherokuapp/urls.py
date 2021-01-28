@@ -16,12 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
-# from herokuapp import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls'))
+    path('', include('home.urls')),
+    path('ocr/', include('OCR.urls')),
+    path('tts/', include('TTS.urls')),
+    path('removeBg/', include('BGRemover.urls')),
     # path('', views.hello_world, name="hello_world"),
     # path('', views.home, name='home')
 ]

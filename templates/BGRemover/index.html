@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Remover</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'b/css/style.css' %}"> -->
+
+</head>
+<body>
+    <p>Bienvenu sur la doc du Background Remover</p>
+    <!-- <a href="{% url 'login' %}">Already user ? Go to login</a><br> -->
+    <a href="{% url 'logout' %}">Logout</a><br>
+    <a href="{% url 'Home' %}">Retour au menu</a>
+
+    <p>Pour utiliser l'api de Background Remover, il suffit de faire une requette post a l'url suivante, avec un parametre image ( de type fichier jpg ) comprenant l'image a traiter; Cela retournera un fichier detouré</p>
+
+    <pre>
+        {% url 'removeBgProcessEndpoint' %}
+    </pre>
+
+    <form action="{% url 'removeBgProcessEndpoint' %}" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>

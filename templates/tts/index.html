@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTS</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'home/css/style.css' %}"> -->
+
+</head>
+<body>
+    <p>Bienvenu sur la doc du TTS</p>
+    <!-- <a href="{% url 'login' %}">Already user ? Go to login</a><br> -->
+    <a href="{% url 'logout' %}">Logout</a><br>
+    <a href="{% url 'Home' %}">Retour au menu</a>
+
+    <p>Pour utiliser l'api de TTS, il suffit de faire une requette post a l'url suivante, avec un parametre sentense au (format string) comprenant la phrase à syntetiser; Cela retournera un fichier mp3</p>
+
+    <pre>
+        {% url 'textToSpeechEndpoint' %}
+    </pre>
+
+    <form action="{% url 'textToSpeechEndpoint' %}" method="post">
+        <input type="text" name="sentense" value="test Django TTS Api">
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>

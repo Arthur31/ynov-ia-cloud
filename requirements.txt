@@ -2,3 +2,7 @@ gunicorn
 django-heroku
 Django~=2.0
 psycopg2
+gTTS
+numpy
+opencv-python
+Pillow
