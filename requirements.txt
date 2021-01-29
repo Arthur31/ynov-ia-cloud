@@ -6,3 +6,5 @@ gTTS
 numpy
 opencv-python
 Pillow
+keras
+tensorflow

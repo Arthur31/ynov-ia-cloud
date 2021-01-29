@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image classifier</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'b/css/style.css' %}"> -->
+
+</head>
+<body>
+    <p>Bienvenu sur la doc de l'image classifier</p>
+    <!-- <a href="{% url 'login' %}">Already user ? Go to login</a><br> -->
+    <a href="{% url 'logout' %}">Logout</a><br>
+    <a href="{% url 'Home' %}">Retour au menu</a>
+
+    <p>Pour utiliser l'api de l'image classifier, il suffit de faire une requette post a l'url suivante, avec un parametre image ( de type fichier jpg ) comprenant l'image à classifier; Cela retournera le type detecté</p>
+
+    <pre>
+        {% url 'classifierCatDogEndpoint' %}
+    </pre>
+
+    <form action="{% url 'classifierCatDogEndpoint' %}" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>

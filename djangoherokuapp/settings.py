@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'home',
     'OCR', 
     'TTS',
-    'BGRemover'
+    'BGRemover',
+    'imgClassif'
 ]
 
 MIDDLEWARE = [
