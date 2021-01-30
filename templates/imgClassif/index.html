@@ -10,12 +10,12 @@
 
 </head>
 <body>
-    <p>Bienvenu sur la doc de l'image classifier</p>
+    <p>Bienvenue sur la doc de l'image classifiée</p>
     <!-- <a href="{% url 'login' %}">Already user ? Go to login</a><br> -->
     <a href="{% url 'logout' %}">Logout</a><br>
     <a href="{% url 'Home' %}">Retour au menu</a>
 
-    <p>Pour utiliser l'api de l'image classifier, il suffit de faire une requette post a l'url suivante, avec un parametre image ( de type fichier jpg ) comprenant l'image à classifier; Cela retournera le type detecté</p>
+    <p>Pour utiliser l'API de l'image classifiée, il suffit de faire une requête post à l'url suivante, avec un paramètre image ( de type fichier jpg ) comprenant l'image à classifier; Cela retournera le type détecté</p>
 
     <pre>
         {% url 'classifierCatDogEndpoint' %}

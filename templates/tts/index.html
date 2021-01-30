@@ -10,12 +10,12 @@
 
 </head>
 <body>
-    <p>Bienvenu sur la doc du TTS</p>
+    <p>Bienvenue sur la doc du TTS</p>
     <!-- <a href="{% url 'login' %}">Already user ? Go to login</a><br> -->
     <a href="{% url 'logout' %}">Logout</a><br>
     <a href="{% url 'Home' %}">Retour au menu</a>
 
-    <p>Pour utiliser l'api de TTS, il suffit de faire une requette post a l'url suivante, avec un parametre sentense au (format string) comprenant la phrase à syntetiser; Cela retournera un fichier mp3</p>
+    <p>Pour utiliser l'API de TTS, il suffit de faire une requête post à l'url suivante, avec un paramètre sentense au (format string) comprenant la phrase à synthétiser; Cela retournera un fichier mp3</p>
 
     <pre>
         {% url 'textToSpeechEndpoint' %}

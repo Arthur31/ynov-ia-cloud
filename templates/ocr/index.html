@@ -10,10 +10,21 @@
 
 </head>
 <body>
-    <p>Bienvenu sur la doc de l'OCR</p>
+    <p>Bienvenue sur la doc de l'OCR</p>
     <!-- <a href="{% url 'login' %}">Already user ? Go to login</a><br> -->
     <a href="{% url 'logout' %}">Logout</a><br>
     <a href="{% url 'Home' %}">Retour au menu</a>
+
+    <p>Pour utiliser l'API de l'OCR, il suffit de faire une requête post à l'url suivante, avec un paramètre "image" ( de type fichier jpg ) comprenant l'image à traiter; Cela retournera le texte détecté sous forme de chaine de caractères</p>
+
+    <pre>
+        {% url 'proceedOcr' %}
+    </pre>
+
+    <form action="{% url 'proceedOcr' %}" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <button type="submit">Send</button>
+    </form>
 
 </body>
 </html>

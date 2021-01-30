@@ -1,2 +1,3 @@
-home/templates/.DS_Store
-enviroment_name/*
+enviroment_name/
+.DS_Store
+.vscode/
